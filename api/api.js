@@ -34,6 +34,8 @@ app.post('/postear', async (req, res) => {
         }
           
         let queueRes = await sqs.sendMessage(params).promise()
+
+        console.log(queueRes)
         
         return res.status(200).send({msj : 'Posteado.'});
     } catch (err) {
