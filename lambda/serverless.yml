@@ -18,4 +18,6 @@ functions:
     handler: lambda.handler
     timeout: 30
     events:
-    - sqs: arn:aws:sqs:us-east-1:794809034213:asistencia-cola
+    - sqs: 
+      arn: arn:aws:sqs:us-east-1:794809034213:asistencia-cola
+      batchSize: 10
