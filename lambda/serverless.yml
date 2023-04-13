@@ -1,0 +1,21 @@
+service: smiledu-pruebas
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  stage: prod
+  iamManagedPolicies:
+    - arn:aws:iam::aws:policy/AmazonSQSFullAccess
+    - arn:aws:iam::aws:policy/AWSLambda_FullAccess
+
+package:
+  exclude:
+    - 'node_modules/**'
+
+functions:
+  cola-handler:
+    handler: lambda.handler
+    timeout: 30
+    events:
+    - sqs: arn:aws:sqs:us-east-1:794809034213:asistencia-cola
