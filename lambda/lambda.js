@@ -6,7 +6,7 @@ exports.handler = async (event) => {
     const fallas = []
     for(let obj of event.Records) {
         try {
-            console.log('Cola body:', JSON.parse(obj.body))
+            console.log('Cola body:', obj.body)
         } catch(err) {
             fallas.push({"itemIdentifier": obj.messageId})
         }
