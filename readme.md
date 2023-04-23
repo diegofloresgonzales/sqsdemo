@@ -42,13 +42,13 @@ Standard
 - $ 0.40 x millon
 
 
-**Visility timeout:** lock o timeout en que puede visualizarse un mensaje, para que nadie mas lo vea
+**Visility timeout:** lock o timeout en que puede visualizarse un mensaje, para que nadie mas lo vea (otros procesos), pasado el tiempo otros procesos podran ver este mensaje y procesarlo.
 
 **Message retention period:** retencion por si ocurre un error, mejor para DLQ, colas normales debe ser bajo.
 
 256KB limite mensaje
 
-**Delivery delay:** tiempo en que esta disponible para ser procesado después de ser agregado a la cola.
+**Delivery delay:** tiempo que pasa para estar disponible para ser procesado (después de ser agregado a la cola).
 
 **Receive message wait time:** tiempo en que puedes consultar a la cola
 DLQ: cola para manejo de fallas
